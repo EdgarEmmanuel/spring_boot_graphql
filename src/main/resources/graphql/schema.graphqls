@@ -1,0 +1,24 @@
+schema{
+    query:Query
+    mutation:Mutation
+}
+
+type Query{
+    getAllClasse:[Classe]
+}
+
+type Mutation{
+    createClasse(classeInput:ClasseInput):Classe
+}
+
+type Classe{
+    id:ID
+    name:String
+    code: String
+}
+
+
+input ClasseInput{
+    name:String
+    code:String
+}
